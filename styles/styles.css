@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 nav {
     background-color: darkblue;
     padding: 10px;
@@ -46,12 +52,13 @@ aside img {
 }
 
 main img {
-    width: 150%;
-    height: auto;
+    width: 200px;
+    height: 150px;
+    float: right;
     ...
 }
 
-can be defined and used.:root {
+:root {
     --heading-background-color: #f06;
     --heading-text-color: #333;
     --heading-font: 'Montserrat', Helvetica, sans-serif;
@@ -67,4 +74,19 @@ footer {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
+}
+
+/* class Selector */
+.box {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #000;
+}
+
+aside h2 {
+    position: absolute;
+    top: 47px;
+    left: 150px;
 }
