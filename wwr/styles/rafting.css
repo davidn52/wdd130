@@ -1,52 +1,93 @@
 :root {
     --primary-color: darkblue;
-    --secondary-color: rgb(48, 119, 143);   
-    --accent1-color: rgb(118, 116, 188);
+    --secondary-color: rgb(48, 119, 143);
+    --accent1-color: #333;
     --accent2-color: rgb(123, 124, 26);
-    --heading-font: 'Arial Black', "Georgia", sans-serif;
+    --heading-font: 'Arial', Helvetica, sans-serif;
     --body-font: 'Verdana', sans-serif;
 }
+
 header {
     background-color: var(--primary-color);
     color: var(--accent2-color);
-    padding: 1rem;
-    text-align: center;
+    padding: 20px;
+    text-align: left;
     font-family: var(--heading-font);
 }
+header img {
+    width: 250px;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
+    margin: 0;
+    padding: 0;
     font-family: var(--body-font);
     line-height: 1.6;
+    background-color: #ffffff;
     color: var(--accent1-color);
 }
-header, main, footer {
+
+header,
+main,
+footer {
     max-width: 840px;
     margin: 0 auto;
 }
-h1, h2 {
+
+h1,
+h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
-nav, p, section, article {
+
+nav,
+p,
+section,
+article {
     margin: 16px;
     padding: 8px;
 }
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 20px;
+}
+nav ul li {
+    margin: 5px 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 16px;
+}
+
 .socialmedia a {
     text-decoration: none;
 }
+
+/*===== HERO IMAGE =====*/
 .hero {
+    width: 100%;
     position: relative;
 }
+
 .hero img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 250px;
 }
+
+/*===== PAGE TITLE =====*/
 h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 40px 20px 20px;
     position: absolute;
     top: 20px;
     width: 100%;
@@ -56,12 +97,38 @@ h1 {
     background-color: var(--accent1-color);
     color: #fff;
 }
+
+/*===== HERO ARTICLE =====*/
 article {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 0 20px;
 }
+
 .hero article img {
     float: right;
-    width: 125px;
+    width: 180px;
+    border-radius: 5px;
+}
+.hero article p {
+    max-width: 600px;
+    font-size: 16px;
+}
+
+/*===== SECTION HEADINGS =====*/
+section h2 {
+    font-size: 22px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+/*===== FOOTER =====*/
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    font-size: 14px;
+}
+footer img {
+    width: 100px;
+    margin-right: 10px;
 }
