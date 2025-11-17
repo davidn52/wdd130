@@ -100,6 +100,7 @@ h1 {
 
 /*===== HERO ARTICLE =====*/
 article {
+    position: relative;
     display: flex;
     gap: 20px;
     align-items: flex-start;
