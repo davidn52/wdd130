@@ -182,18 +182,25 @@ footer {
     background-color: var(--primary-color);
 }
 
+footer .social-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
 footer .social-icons a {
-    margin-left: 15px;
-    color: white;
     text-decoration: none;
-    font-size: 18px;
 }
 
-footer .social-icons a:hover {
-    color: #0077cc;
+footer .social-icons img {
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
-footer img {
-    width: 100px;
-    margin-right: 10px;
+footer .social-icons img:hover {
+    transform: scale(1.08);
+    opacity: 0.9;
 }
