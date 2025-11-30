@@ -58,38 +58,41 @@ article {
     padding: 8px;
 }
 
-nav {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 15px 40px;
-background-color: #ffffff;
-border-bottom: 1px solid #ddd;
+/* Header navigation - scoped to header to avoid styling footer nav */
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+    padding: 0 12px;
+    background: transparent;
 }
 
-nav ul {
+header nav ul {
     display: flex;
-    gap: 30px;
+    gap: 18px;
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-nav ul li {
-    margin: 0;
-}
-nav ul li a {
+header nav ul li { margin: 0; }
+/* header links should contrast with the header background */
+header nav ul li a {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: #fff;
     font-size: 16px;
-    padding: 5px 10px;
-    transition: 0.3s ease;
+    padding: 6px 10px;
+    transition: background-color 0.2s ease;
 }
 
-nav ul li a:hover {
-    background-color: var(--primary-color);
+header nav ul li a:hover {
+    background-color: rgba(255,255,255,0.12);
     color: #fff;
-    border-radius: 5px;
+    border-radius: 6px;
 }
+
+/* keep a fallback generic nav style for other navs (footer etc.) */
+nav:not(header nav) ul { list-style: none; padding: 0; margin: 0; }
 
 .socialmedia a {
     text-decoration: none;
@@ -114,6 +117,9 @@ header {
     width: 100%;
     height: auto;
 }
+
+/* give the hero a tidy top spacing when header is present */
+.hero { margin-top: 0.5rem; border-radius: 6px; }
 
 /* subtle dark overlay to improve text contrast over the image */
 .hero::before {
@@ -358,3 +364,20 @@ footer .social-icons img:hover {
 .submit-btn:hover {
     background-color: var(--secondary-color);
 }
+
+/* General main spacing for readability */
+main { padding: 12px; }
+
+/* Contact form spacing improvements */
+.contact-form label { display: block; margin-top: 12px; font-weight: 600; }
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea { width: 100%; }
+
+/* make social icons look consistent (if .social-icons used) */
+.social-icons { display: flex; gap: 12px; align-items: center; }
+.social-icons img { width: 36px; height: auto; }
+
+/* match visual styling for the rubric-required nav.socialmedia */
+.socialmedia { display: flex; gap: 12px; align-items: center; justify-content: flex-end; }
+.socialmedia img { width: 36px; height: auto; }
