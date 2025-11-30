@@ -11,7 +11,8 @@ header {
     display: grid;
     grid-template-columns: 1fr auto;
     background-color: var(--primary-color);
-    color: var(--accent2-color);
+    /* ensure sufficient contrast in header */
+    color: #fff;
     justify-items: start;
     align-items: center;
     padding: 20px;
@@ -188,6 +189,7 @@ article {
     padding: 40px;
     background-color: var(--secondary-color);
     text-align: center;
+    color: #fff; /* use white text on the colored adventures background for contrast */
 }
 
 #adventures h2 {
@@ -223,6 +225,7 @@ footer {
     font-size: 14px;
     text-align: right;
     background-color: var(--primary-color);
+    color: #fff; /* ensure footer text contrasts with dark background */
 }
 
 footer .social-icons {
